@@ -33,7 +33,7 @@ const Profile = ({ match, location }) => {
 
 
   const handleFollow = async () => {
-    await fetch(`http://localhost:5000/api/users/${id}/follow`, {
+    await fetch(`/${id}/follow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const Profile = ({ match, location }) => {
   }
 
   const handleUnFollow = async () => {
-    await fetch(`http://localhost:5000/api/users/${id}/unfollow`, {
+    await fetch(`/${id}/unfollow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Profile = ({ match, location }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      await fetch(`http://localhost:5000/api/users/${id}`, {
+      await fetch(`/${id}`, {
         method: "GET",
       }).then((res) => res.json().then((user) => {
         // console.log(user);
@@ -78,7 +78,7 @@ const Profile = ({ match, location }) => {
   }, [])
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/getuser", {
+    fetch("/getuser", {
       method: "POST",
       headers: {
         "auth-token": localStorage.getItem("token")

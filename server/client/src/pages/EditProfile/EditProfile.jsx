@@ -10,7 +10,7 @@ const EditProfile = () => {
     const[editUser,setEditUser] = useState([])
     
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/getuser", {
+        fetch("/getuser", {
           method: "POST",
           headers: {
             "auth-token": localStorage.getItem("token")

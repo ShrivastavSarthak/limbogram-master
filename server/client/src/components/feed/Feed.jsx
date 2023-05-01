@@ -34,7 +34,7 @@ const Feed = () => {
       navigate("/")
       alert("Please login")
     }
-    fetch("http://localhost:5000/api/post/timeline/post", {
+    fetch("/timeline/post", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Feed = () => {
   // }, [])
 
   const likeDislikePost = async (id) => {
-    await fetch(`http://localhost:5000/api/post/${id}/like`, {
+    await fetch(`/${id}/like`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

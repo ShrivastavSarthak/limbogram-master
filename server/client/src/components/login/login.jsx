@@ -27,7 +27,7 @@ const Logincomp = (props) => {
 
   const handleSubmit =async (e) => {
     e.preventDefault();
-    const responce = await fetch("http://localhost:5000/api/auth/login", {
+    const responce = await fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

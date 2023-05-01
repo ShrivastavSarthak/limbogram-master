@@ -14,7 +14,7 @@ const Rightbar = () => {
     
   }
   useEffect(() => {
-    fetch("http://localhost:5000/api/users/timeline/user", {
+    fetch("/timeline/user", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const Rightbar = () => {
   })
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/auth/getuser', {
+    fetch('/getuser', {
       method: "POST",
       headers: {
         "auth-token": localStorage.getItem("token")

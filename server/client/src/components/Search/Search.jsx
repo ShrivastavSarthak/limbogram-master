@@ -11,7 +11,7 @@ const Search = () => {
 
 
     useEffect(()=>{
-      fetch("http://localhost:5000/api/users/timeline/user",{
+      fetch("/timeline/user",{
         method: "GET",
         headers:{
           "Content-Type": "application/json",

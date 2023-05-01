@@ -5,7 +5,7 @@ const MOdalName = ({ userID }) => {
     useEffect(() => {
         const fetchUser = async () => {
             // console.log(userID);
-            await fetch(`http://localhost:5000/api/users/${userID}`, {
+            await fetch(`/${userID}`, {
                 method: 'GET'
             }).then((res) => res.json().then((data) => {
                 // console.log(data);

@@ -20,7 +20,7 @@ const Reg = (props) => {
     e.preventDefault()
     const {username,email, password} = credentials
 
-    const responce = await fetch("http://localhost:5000/api/auth/signup",{
+    const responce = await fetch("/signup",{
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -32,7 +32,7 @@ const SideBar = () => {
     const open = Boolean(anchorEl)
     const id = open ? "simple-popover" : undefined
     useEffect(() => {
-        fetch("http://localhost:5000/api/auth/getuser", {
+        fetch("/getuser", {
           method: "POST",
           headers: {
             "auth-token": localStorage.getItem("token")

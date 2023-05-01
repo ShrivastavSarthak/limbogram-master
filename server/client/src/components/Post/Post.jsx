@@ -18,7 +18,7 @@ const Post = () => {
   const [image, setImage] = useState("")
   const [url, setUrl] = useState("")
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/getuser", {
+    fetch("/getuser", {
       method: "POST",
       headers: {
         "auth-token": localStorage.getItem("token")
@@ -52,7 +52,7 @@ const Post = () => {
   useEffect(() => {
     if (url) {
       try {
-        fetch("http://localhost:5000/api/post/addpost", {
+        fetch("/addpost", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
